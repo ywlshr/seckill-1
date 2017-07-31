@@ -1,7 +1,11 @@
 package org.seckill.dao;
 
+import com.sun.net.httpserver.Authenticator;
 import org.apache.ibatis.annotations.Param;
+import org.seckill.entity.Success;
 import org.seckill.entity.SuccessKilled;
+
+import java.util.List;
 
 /**
  * Created by wchb7 on 16-5-8.
@@ -25,5 +29,17 @@ public interface SuccessKilledDao {
      * @return
      */
     SuccessKilled queryByIdWithSeckill(@Param("seckilledId") long seckilledId, @Param("userPhone") long userPhone);
+
+    /**
+     * 查询所有秒杀成功的数据
+     * @return
+     */
+    List<SuccessKilled> queryAllSuccessSeckill();
+
+    /**
+     * 查询success表
+     * @return
+     */
+    List<Success> queryAllSuccessSeckilled();
 
 }

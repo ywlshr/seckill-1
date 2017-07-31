@@ -10,6 +10,7 @@ import org.seckill.dao.cache.RedisDao;
 import org.seckill.dto.Exposer;
 import org.seckill.dto.SeckillExecution;
 import org.seckill.entity.Seckill;
+import org.seckill.entity.Success;
 import org.seckill.entity.SuccessKilled;
 import org.seckill.enums.SeckillStatEnum;
 import org.seckill.exception.RepeatKillException;
@@ -51,6 +52,18 @@ public class SeckillServiceImpl implements SeckillService {
         return seckillDao.queryAll(0, 1000);
     }
 
+    public List<SuccessKilled> getSuccessSeckillList() {
+        return successKilledDao.queryAllSuccessSeckill();
+    }
+
+    public List<Success> queryAllSuccessSeckilled() {
+        return successKilledDao.queryAllSuccessSeckilled();
+    }
+
+    public int insertSeckillProduct(String name,int number,Date startTime,Date endTime,Date createTime)
+    {
+        return seckillDao.insertSeckillProduct(name, number, startTime, endTime, createTime);
+    }
     public Seckill getById(long seckillId) {
         return seckillDao.queryById(seckillId);
     }

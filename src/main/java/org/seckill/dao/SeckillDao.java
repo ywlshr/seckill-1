@@ -21,6 +21,8 @@ public interface SeckillDao {
      */
     int reduceNumber(@Param("seckillId") long seckillId, @Param("killTime") Date killTime);
 
+    int insertSeckillProduct(@Param("name") String name, @Param("number") int number, @Param("startTime") Date startTime, @Param("endTime") Date endTime, @Param("createTime") Date createTime);
+
 
     /**
      * 根据ID查询秒杀对象

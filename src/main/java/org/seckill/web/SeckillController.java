@@ -2,11 +2,12 @@ package org.seckill.web;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.ibatis.annotations.Param;
 import org.seckill.dto.Exposer;
 import org.seckill.dto.SeckillExecution;
 import org.seckill.dto.SeckillResult;
 import org.seckill.entity.Seckill;
+import org.seckill.entity.Success;
+import org.seckill.entity.SuccessKilled;
 import org.seckill.enums.SeckillStatEnum;
 import org.seckill.exception.RepeatKillException;
 import org.seckill.exception.SeckillCloseException;
@@ -45,6 +46,33 @@ public class SeckillController {
         model.addAttribute("list", list);
 
         return "list";
+    }
+
+    @RequestMapping(value = "/task", method = RequestMethod.GET)
+    public String task(Model model) {
+        //list.jsp + model = ModelAndView
+        //获取秒杀成功列表页
+        List<SuccessKilled> task = seckillService.getSuccessSeckillList();
+        model.addAttribute("task", task);
+
+        return "task";
+    }
+
+    @RequestMapping(value = "/success", method = RequestMethod.GET)
+    public String success(Model model) {
+        //list.jsp + model = ModelAndView
+        //获取秒杀成功列表页
+        List<Success> success = seckillService.queryAllSuccessSeckilled();
+        model.addAttribute("success", success);
+
+        return "success";
+    }
+
+    @RequestMapping(value = "/insertseckill", method = RequestMethod.GET)
+    public String insertseckill() {
+        //list.jsp + model = ModelAndView
+        //获取秒杀成功列表页
+        return "insertseckill";
     }
 
     @RequestMapping(value = "/{seckillId}/detail", method = RequestMethod.GET)

@@ -3,10 +3,13 @@ package org.seckill.service;
 import org.seckill.dto.Exposer;
 import org.seckill.dto.SeckillExecution;
 import org.seckill.entity.Seckill;
+import org.seckill.entity.Success;
+import org.seckill.entity.SuccessKilled;
 import org.seckill.exception.RepeatKillException;
 import org.seckill.exception.SeckillCloseException;
 import org.seckill.exception.SeckillException;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -24,7 +27,28 @@ public interface SeckillService {
      */
     List<Seckill> getSeckillList();
 
+    /**
+     * 查询所有秒杀成功记录
+     * @return
+     */
+    List<SuccessKilled> getSuccessSeckillList();
 
+    /**
+     * 查询success表
+     * @return
+     */
+    List<Success> queryAllSuccessSeckilled();
+
+    /**
+     * 插入秒杀产品
+     * @param name
+     * @param number
+     * @param startTime
+     * @param endTime
+     * @param createTime
+     * @return
+     */
+    int insertSeckillProduct(String name, int number, Date startTime, Date endTime, Date createTime);
     /**
      * 查询单个秒杀记录
      *

@@ -25,6 +25,17 @@ var seckill = {
         }
     },
 
+    test:{
+        my: function(){
+            var killPhoneModal = $('#myModal');
+            killPhoneModal.modal({
+                show: true,//显示弹出层
+                backdrop: 'static',//禁止位置关闭
+                keyboard: false//关闭键盘事件
+            });
+        }
+
+    },
     //详情页秒杀逻辑
     detail: {
         //详情页初始化

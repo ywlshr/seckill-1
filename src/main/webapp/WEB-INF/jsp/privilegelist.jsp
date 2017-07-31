@@ -77,7 +77,7 @@
                         <td>${sk.createBranch}</td>
                         <td>${sk.lockProjectBranch}</td>
                         <td>
-                            <a class="btn btn-success" role="button" data-toggle="popover" data-trigger="focus" id="${sk.userid}" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Link</a>
+                            <a class="btn btn-success" role="button" data-toggle="modal" data-target="#myModal" data-trigger="focus" id="${sk.userid}" onclick="seckill.test.my()">Link</a>
                           <!--  <a class="btn btn-info" href="/privilege/${sk.userid}/detail" 　target="_blank">Link</a> -->
                         </td>
                     </tr>
@@ -90,9 +90,36 @@
     </div>
 </div>
 
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    模态框（Modal）标题
+                </h4>
+            </div>
+            <div class="modal-body">
+                在这里添加一些文本
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-primary">
+                    提交更改
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
 </body>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="/resource/script/seckill.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).ready(function(){
         $('#y00217209').on('show.bs.modal', function() {

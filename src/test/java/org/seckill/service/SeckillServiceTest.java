@@ -89,7 +89,7 @@ public class SeckillServiceTest {
 
     @Test
     public void testExecuteSeckillProcedure() {
-        long seckillId = 1004l;
+        long seckillId = 1017l;
         long phone = 15811111122l;
 
         Exposer exposer = seckillService.exportSeckillUrl(seckillId);

@@ -15,6 +15,12 @@
        AND number >0;
    </update>
 
+    <insert id="insertSeckillProduct">
+        INSERT INTO
+        seckill(name, number, start_time, end_time, create_time)
+        VALUES (#{name}, #{number}, #{start_time}, #{end_time}, #{create_time})
+    </insert>
+
     <!--   Seckill queryById(long seckillId);-->
     <select id="queryById" resultType="Seckill" parameterType="long">
         SELECT seckill_id,name,number,start_time,end_time,create_time
