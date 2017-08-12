@@ -6,9 +6,56 @@
 <head>
     <title>权限列表页</title>
     <%@include file="common/head.jsp" %>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
 </head>
 
 <body>
+
+<style type="text/css">
+    .dropdown-submenu {
+        position: relative;
+    }
+    .dropdown-submenu > .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -6px;
+        margin-left: -1px;
+        -webkit-border-radius: 0 6px 6px 6px;
+        -moz-border-radius: 0 6px 6px;
+        border-radius: 0 6px 6px 6px;
+    }
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+    .dropdown-submenu > a:after {
+        display: block;
+        content: " ";
+        float: right;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-left-color: #ccc;
+        margin-top: 5px;
+        margin-right: -10px;
+    }
+    .dropdown-submenu:hover > a:after {
+        border-left-color: #fff;
+    }
+    .dropdown-submenu.pull-left {
+        float: none;
+    }
+    .dropdown-submenu.pull-left > .dropdown-menu {
+        left: -100%;
+        margin-left: 10px;
+        -webkit-border-radius: 6px 0 6px 6px;
+        -moz-border-radius: 6px 0 6px 6px;
+        border-radius: 6px 0 6px 6px;
+    }
+</style>
 <!-- Buttons 库的核心文件 -->
 <link rel="stylesheet" href="/resource/css/buttons.css">
 <link rel="stylesheet" href="/resource/css/navbar.css">
@@ -52,6 +99,38 @@
 </nav>
 
 <div class="container">
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Dropdown
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="mymeun">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="dropdown-submenu"><a href="#">gao3</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">qiao1</a></li>
+                    <li><a href="#">qiao2</a></li>
+                    <li><a href="#">qiao3</a></li>
+                    <li class="dropdown-submenu"><a href="#">gao1111</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">qiao122</a></li>
+                            <li><a href="#">qiao222</a></li>
+                            <li><a href="#">qiao322</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <a class="btn btn-success button-longshadow-right" id="btn1">change</a>
+    </div>
+
+</div>
+
+
+<div class="container">
     <div class="panel panel-default">
         <div class="panel-heading text-center">
             <h1>权限列表</h1>
@@ -90,41 +169,9 @@
     </div>
 </div>
 
-<!-- 模态框（Modal） -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    &times;
-                </button>
-                <h4 class="modal-title" id="myModalLabel">
-                    模态框（Modal）标题
-                </h4>
-            </div>
-            <div class="modal-body">
-                在这里添加一些文本
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
-                </button>
-                <button type="button" class="btn btn-primary">
-                    提交更改
-                </button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal -->
-</div>
-
 </body>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="/resource/script/seckill.js" type="text/javascript"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('#y00217209').on('show.bs.modal', function() {
-
-        });
-    });
-</script>
+<script src="/resource/script/meun.js"></script>
 </html>
