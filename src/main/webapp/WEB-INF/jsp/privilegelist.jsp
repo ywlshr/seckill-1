@@ -104,7 +104,7 @@
             Dropdown
             <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="mymeun">
+        <ul class="dropdown-menu" id="menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
