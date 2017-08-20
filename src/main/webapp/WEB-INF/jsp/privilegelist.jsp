@@ -6,7 +6,7 @@
 <head>
     <title>权限列表页</title>
     <%@include file="common/head.jsp" %>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
     <title></title>
     <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
 </head>
@@ -17,6 +17,7 @@
     .dropdown-submenu {
         position: relative;
     }
+
     .dropdown-submenu > .dropdown-menu {
         top: 0;
         left: 100%;
@@ -26,9 +27,11 @@
         -moz-border-radius: 0 6px 6px;
         border-radius: 0 6px 6px 6px;
     }
+
     .dropdown-submenu:hover > .dropdown-menu {
         display: block;
     }
+
     .dropdown-submenu > a:after {
         display: block;
         content: " ";
@@ -42,12 +45,15 @@
         margin-top: 5px;
         margin-right: -10px;
     }
+
     .dropdown-submenu:hover > a:after {
         border-left-color: #fff;
     }
+
     .dropdown-submenu.pull-left {
         float: none;
     }
+
     .dropdown-submenu.pull-left > .dropdown-menu {
         left: -100%;
         margin-left: 10px;
@@ -64,7 +70,8 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -78,7 +85,8 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Dropdown <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Action</a></li>
                         <li><a href="#">Another action</a></li>
@@ -100,29 +108,12 @@
 
 <div class="container">
     <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Dropdown
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="true">
+            Services
             <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu" id="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="dropdown-submenu"><a href="#">gao3</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">qiao1</a></li>
-                    <li><a href="#">qiao2</a></li>
-                    <li><a href="#">qiao3</a></li>
-                    <li class="dropdown-submenu"><a href="#">gao1111</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">qiao122</a></li>
-                            <li><a href="#">qiao222</a></li>
-                            <li><a href="#">qiao322</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
+        <ul class="dropdown-menu" id="OpenStack">
         </ul>
         <a class="btn btn-success button-longshadow-right" id="btn1">change</a>
     </div>
@@ -156,8 +147,9 @@
                         <td>${sk.createBranch}</td>
                         <td>${sk.lockProjectBranch}</td>
                         <td>
-                            <a class="btn btn-success" role="button" data-toggle="modal" data-target="#myModal" data-trigger="focus" id="${sk.userid}" onclick="seckill.test.my()">Link</a>
-                          <!--  <a class="btn btn-info" href="/privilege/${sk.userid}/detail" 　target="_blank">Link</a> -->
+                            <a class="btn btn-success" role="button" data-toggle="modal" data-target="#myModal"
+                               data-trigger="focus" id="${sk.userid}" onclick="seckill.test.my()">Link</a>
+                            <!--  <a class="btn btn-info" href="/privilege/${sk.userid}/detail" 　target="_blank">Link</a> -->
                         </td>
                     </tr>
                 </c:forEach>
@@ -173,5 +165,5 @@
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="/resource/script/seckill.js" type="text/javascript"></script>
-<script src="/resource/script/meun.js"></script>
+<script src="/resource/script/meun.js?v=20170820"></script>
 </html>

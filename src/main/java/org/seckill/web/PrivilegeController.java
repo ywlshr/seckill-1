@@ -38,7 +38,7 @@ public class PrivilegeController {
         return null;
     }
 
-    @RequestMapping(value = "/privilege", method = RequestMethod.GET)
+    @RequestMapping(value = "/role", method = RequestMethod.GET)
     public String exposer(Model model) {
         try {
             List<Privilege> privilegeList = privilegeService.SelectPrivilegeList();
